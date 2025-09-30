@@ -7,8 +7,8 @@ use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
-    return view('login');
-});
+    return view('welcome');
+})->name('home');
 
 Route::get('/login',[AuthController::class,'ShowLoginForm'])->name('login');
 Route::post('/login',[AuthController::class,'login']);
