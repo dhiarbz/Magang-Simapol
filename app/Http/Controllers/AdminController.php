@@ -26,9 +26,10 @@ class AdminController extends Controller
         $laporanHariini = Laporan::whereDate('created_at', $today)->count();
         $laporanBulanini = Laporan::whereMonth('created_at', $currentMonth)->whereYear('created_at',$currentYear)->count();
         
+        $totalUser = User::count();
         $user = auth()->user();
 
-        return view('admin.dashboard',compact('laporan','totalAduan','totalLaporan','laporanHariini','laporanBulanini','user'));
+        return view('admin.dashboard',compact('laporan','totalAduan','totalLaporan','laporanHariini','laporanBulanini','user','totalUser'));
     }
 
     public function data_laporan(){

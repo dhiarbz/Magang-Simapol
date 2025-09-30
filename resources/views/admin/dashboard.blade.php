@@ -168,6 +168,14 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-4">
+              <div class="card text-white bg-warning">
+                <div class="card-body">
+                  <h5 class="card-title">Jumlah User</h5>
+                  <p class="card-text">{{ $totalUser}}</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Recent Reports Table -->

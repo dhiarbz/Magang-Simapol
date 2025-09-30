@@ -300,6 +300,12 @@
         .form-step { display: none; }
         .form-step.active { display: block; }
 
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0:
+        }
+
         /* =================================================================
            6. KONTAK & FOOTER
            ================================================================= */
