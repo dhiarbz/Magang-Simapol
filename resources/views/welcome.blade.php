@@ -106,7 +106,7 @@
             padding: 8px 18px;
             border-radius: var(--radius);
             transition: all 0.2s ease-in-out;
-            font-family: var(--font-family);
+            text-decoration: none;
         }
         
         .login-btn:hover {
@@ -117,6 +117,8 @@
         
         .login-btn i { 
             margin-right: 8px; 
+            font-family: var(--font-family);
+
         }
         
         /* Hero Section */
@@ -126,7 +128,7 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 0;
+            padding: 230px 0;
             text-align: center;
         }
         
@@ -161,6 +163,7 @@
             padding: 12px 30px;
             border-radius: var(--radius);
             font-weight: 600;
+            text-decoration: none;
             transition: all 0.3s ease;
         }
         
@@ -410,13 +413,13 @@
             <a href=""><i class=""></i> Tentang SIMAPOL</a>
             <a href=""><i class=""></i> Kontak</a>
         </nav>
-        <a class="login-btn" href="{{ url('/login') }}"><i class="fa-solid fa-user"> Masuk / Daftar</i></a>
+        <a class="login-btn fa-solid fa-user" href="{{ url('/login') }}"><i class=""> Masuk / Daftar</i></a>
     </header>
 
 
     <!-- Main Content -->
     <section class="hero-section text-center">
-        <div class="container">
+        <div class="container ">
             <h1 class="display-4 fw-bold mb-4">SIMAPOL</h1>
             <p class="lead mb-5">Layanan Pengaduan Masyarakat</p>
             <div class="row justify-content-center">
@@ -425,7 +428,7 @@
                         <a href="{{ url('/login') }}" class="btn btn-primary btn-lg me-md-2 px-4">
                             <i class="fas fa-plus-circle me-2"></i>Buat Aduan
                         </a>
-                        <a href="" class="btn btn-outline-light btn-lg px-4">
+                        <a href="#aduan" class="btn btn-outline-light btn-lg px-4">
                             <i class="fas fa-search me-2"></i>Cek Status Aduan
                         </a>
                     </div>
@@ -433,6 +436,41 @@
             </div>
         </div>
     </section>
+
+    <!-- Jelajah Aduan -->
+     <section class="aduan py-5 bg-light" id="aduan">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="fw-bold">Jelajah Aduan</h2>
+                    <p class="text-muted">Sudah pernah melaporkan di kanal lain? Cek kode aduan di sini.</p>
+                </div>
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <form action="" method="GET" class="row g-3 align-items-center">
+                        @csrf
+                        <div class="col-12 col-md-10">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bg-light border-0">
+                                    <i class="fas fa-search text-muted"></i>
+                                </span>
+                                <input 
+                                    type="text" 
+                                    id="search" 
+                                    class="form-control border-0 bg-light" 
+                                    placeholder="Contoh: 123"
+                                >
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <a href="" class="btn-polisi"><i class="fas fa-search me-2"></i> Lacak Aduan</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+     </section>
 
     <!-- Quick Actions -->
     <section class="py-5 bg-light">
